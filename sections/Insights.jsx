@@ -20,10 +20,12 @@ const Insights = () => (
       <TypingText title="| Insight"
         textStyles="text-center" />
       <TitleText title="Insight about metaverse" textStyles="text-center" />
-      <div>
+      <div className="flex flex-col gap-3">
         {insights.map((insight, index) => (
           <InsightCard
             key={`insight-${index}`}
+            {...insight}
+            index
           />
         ))}
       </div>
